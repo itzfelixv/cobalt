@@ -73,7 +73,7 @@ export default async function(obj) {
         params = await resolveRedirectingURL(
             `https://www.reddit.com/r/${params.sub}/s/${params.shareId}`,
             obj.dispatcher,
-            genericUserAgent
+            {'User-Agent': genericUserAgent}
         );
     }
 
